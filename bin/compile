@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+set -e
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+LP_DIR=`cd $(dirname $0); cd ..; pwd`
+
+cd $BUILD_DIR
+file="SConstruct"
+if [ -f $file ]
+then
+    echo "-----> SConstruct file found"
+else
+    echo "-----> No SConstruct file found. Compilation cannot continue."
+    exit 1;
+fi
+
+scons
+echo "-----> Compilation done"
