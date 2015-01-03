@@ -7,7 +7,7 @@ CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 cd $BUILD_DIR
-file="SConstruct"
+file="SConstruct" 
 if [ -f $file ]
 then
     echo "-----> SConstruct file found"
@@ -15,6 +15,8 @@ else
     echo "-----> No SConstruct file found. Compilation cannot continue."
     exit 1;
 fi
+
+export SWIG_LIB=$BUILD_DIR/.apt/usr/share/swig2.0/
 
 scons
 echo "-----> Compilation done"
