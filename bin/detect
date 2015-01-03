@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # bin/detect <build-dir>
 
+build_dir=$(<SConstructFile)
+echo "$SConstructFile"
+
 if [ -f $1/SConstruct ]; then
   echo "SConstruct" && exit 0
 else
