@@ -17,7 +17,9 @@ else
 fi
 
 export SWIG_LIB=$BUILD_DIR/.apt/usr/share/swig2.0/
-export     SWIG=$BUILD_DIR/.apt/usr/bin/swig
+#export     SWIG=$BUILD_DIR/.apt/usr/bin/swig
+PATH=$PATH:$BUILD_DIR/.apt/usr/bin/
+export PATH
 
 scons
 echo "-----> Compilation done"
