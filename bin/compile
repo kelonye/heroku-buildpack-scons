@@ -18,9 +18,7 @@ fi
 
 export SWIG_LIB=$BUILD_DIR/.apt/usr/share/swig2.0/
 export     SWIG=$BUILD_DIR/.apt/usr/bin/swig2.0
-export SWIG_FLAGS='-python -c++'
-PATH=$PATH:$BUILD_DIR/.apt/usr/bin/
-export PATH
+export PATH=$PATH:$BUILD_DIR/.apt/usr/bin/
 
 scons
 echo "-----> Compilation done"
