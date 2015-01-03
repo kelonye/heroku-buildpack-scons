@@ -17,6 +17,7 @@ else
 fi
 
 export SWIG_LIB=$BUILD_DIR/.apt/usr/share/swig2.0/
+export     SWIG=$BUILD_DIR/.apt/usr/bin/swig
 
 scons
 echo "-----> Compilation done"
